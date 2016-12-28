@@ -1,5 +1,5 @@
 {
-  "name": "ADM-treeview",
+  "name": "adm-trv",
   "version": "1.0.0",
   "description": "Pure AngularJs TreeView",
   "main": "server.js",
