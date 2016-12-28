@@ -1,0 +1,32 @@
+{
+  "name": "ADM-treeview",
+  "version": "1.0.0",
+  "description": "Pure AngularJs TreeView",
+  "main": "server.js",
+  "scripts": {
+    "test": "karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmirkabirDataMiners/ADM-treeView.git"
+  },
+  "keywords": [
+    "ADM-treeView",
+    "angular",
+    "pure",
+    "treeview",
+    "sass",
+    "amirkabirdataminers",
+    "adm"
+  ],
+  "author": "ADM | Amirkabir Data Miners <info@adm-co.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmirkabirDataMiners/ADM-treeView/issues"
+  },
+  "homepage": "https://github.com/AmirkabirDataMiners/ADM-treeView",
+  "dependencies": {
+    "browser-sync": "^2.18.5",
+    "uglify-js": "^2.7.5"
+  }
+}

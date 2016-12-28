@@ -1,0 +1,484 @@
+@charset "UTF-8";
+
+@import "compass/CSS3";
+@import "ceaser-easing";
+@import "ADM-treeView-config";
+
+ 
+adm-trv {
+    max-width: 100%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    direction: ltr;   
+    font-size: 16px;
+    
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    input {
+        outline: none;
+        height: 31px;
+    }
+}
+
+.treeEditor {
+    width: 100%;
+    color: #828282;
+    fill: #828282;
+
+    ul.te-ui {
+        list-style: none;
+        padding: 0 40px 0 10px;
+
+        >li {
+            position: relative;
+            display: block;
+            background: white;
+            border: 2px solid white;
+            margin: 20px 0;
+            border-radius: 16px;
+            @include box-shadow(0 2px 5px 0 #c5c5c5);
+            overflow: hidden;
+            //-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+            
+        }
+
+        .te-i:not(.noI) {
+            font-size: 1em;
+            background: white;
+            border-radius: 50%;
+            text-align: center;
+            width: 25px;
+            height: 25px;
+            padding: 4px;
+            line-height: 25px;
+            vertical-align: top;
+            margin-top: 4px;
+            cursor: pointer;
+            @include transition(all .5s $ease, box-shadow .3s);
+
+            &:hover {
+                @include box-shadow(0 0 4px 0 #dd693f);
+            }
+
+            &.deg90 {
+                @include rotate(90deg);
+            }
+
+            &.ng-hide {
+                opacity: 0;
+                @include scale(.5);
+            }
+        }
+
+
+        .te-kidContent {
+            position: relative;
+            display: block;
+            min-height: 70px;
+            overflow: hidden;
+            @include transition(all .5s);
+
+            &.ng-hide {
+                min-height: 0;
+                max-height: 0;
+            }
+
+            >div {
+                position: relative;
+                display: table;
+                width: 100%;
+                font-size: .8em;
+                padding: 1em;
+            }
+        }
+
+    }
+
+    > ul.te-ui {
+        padding: 1em;
+    }
+
+    &.notEditable {
+        .te-toolbar>.te-i:not(:first-child), .te-add {
+            display: none;
+        }
+    }
+    
+    &.rtl {
+        direction: rtl;
+        
+        .te-header {
+            padding-right: 1em;
+
+            .edit {
+                margin-right: -10px;
+            }
+        }
+        
+        .te-toolbar {
+            direction: ltr;
+            left: 0;
+            padding-left: 6px;
+        }
+        
+        .te-add .add input {
+            margin-left: 1em;
+        }
+    }
+    &.ltr {
+        .te-header {
+            padding-left: 1em;
+            
+            .edit {
+                margin-left: -10px;
+            }
+        }
+        
+        .te-toolbar {
+            right: 0;
+            padding-right: 6px;
+        }
+
+        .te-add .add input {
+            margin-right: 1em;
+        }
+    }
+}
+
+.te-header {
+    cursor: pointer;
+    background: #e8c187;
+    color: #795548;
+    font-size: 0.8em;
+    line-height: 32px;
+    height: 32px;
+    //border-radius: 16px 16px 0 0;
+    .edit {
+
+        input {
+            background: #f5dab1;
+            border: none;
+            border-radius: 16px;
+            padding: 0 0.8em;
+            height: 26px;
+        }
+    }
+}
+
+.te-toolbar {
+    position: absolute;
+    display: block;
+    top: 0;
+    direction: rtl;
+
+    .deleteConfirm {
+        font-size: .8em;
+        margin: 0 1em;
+
+        span {
+            border-radius: 2em;
+            height: 25px;
+            vertical-align: top;
+            margin-top: 4px;
+            display: inline-block;
+            line-height: 2;
+            padding: 0 0.7em;
+            cursor: pointer;
+
+            &:last-child {
+                background: #f44336;
+                color: white;
+
+                &:hover {
+                    background: darken(#f44336, 5%);
+                }
+            }
+            &:first-child {
+                background: white;
+
+                &:hover {
+                    background: darken(white, 5%);
+                }
+            }
+        }
+    }
+}
+
+.te-add {
+    .te-add-btn {
+        background: #e8c187;
+        color: #795548;
+        fill: #795548;
+        width: 200px;
+        max-width: 100%;
+        position: relative;
+        display: block;
+        border-radius: 1em;
+        text-align: center;
+        margin: 1em auto;
+        font-size: .9em;
+        font-weight: bold;
+        padding: 0.4em 0;
+        cursor: pointer;
+        line-height: 1.5;
+
+        &:after {
+            $margin: 1px;
+            content: '';
+            position: absolute;
+            display: block;
+            width: calc(100% - #{2*$margin});
+            height: calc(100% - #{2*$margin});
+            border-radius: inherit;
+            border: 2px solid white;
+            top: 0;
+            left: 0;
+            margin: $margin;
+        }
+
+        &:hover {
+            background: darken(#e8c187, 5%);
+        }
+    }
+
+    .add {
+        margin-bottom: 1.1em;
+        margin-top: 1.4em;
+        text-align: center;
+
+        input {
+            width: 150px;
+            font-size: 0.8em;
+            border-radius: 16px;
+            border: 1px solid #ccc;
+            color: #808080;
+            padding: 2px 1em;
+        }
+
+        .te-i {
+            background: #eee !important;
+
+            &:hover {
+                @include box-shadow(0 0 4px 0 #888787);
+            }
+        }
+    }
+}
+
+.te-empty {
+    //background: #ccc;
+    text-align: center;
+    color: #e8c187;
+    fill: #e8c187;
+    font-size: .8em;
+    margin: 0;
+    height: 0;
+    line-height: 50px;
+    overflow: hidden;
+    font-weight: bold;
+    @include transition(height .3s);
+
+    &.active {
+        height: 50px;
+    }
+
+    i {
+        font-size: 1.5em;
+    }
+
+    &.main {
+        color: #ff5722;
+        fill: #ff5722;
+        background: white;
+    }
+}
+
+.te-selectable {
+    padding: 8px 0;
+    
+    >span {
+        padding: 0 3px;
+    }
+}
+
+.te-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(black, .3);
+    vertical-align: top;
+    margin-top: 6px;
+    @include transition(all .3s $ease);
+    
+    >div {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #d4896d;
+        opacity: 0;
+        @include scale(0);
+        @include transition(all .15s $ease);
+        
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 80%;
+            height: 50%;
+            border: 0 solid white;
+            border-width: 0 0 2px 2px;
+            top: 50%;
+            left: 50%;
+            margin-top: -1px;
+            @include vtrans(translate(-50%, -50%) rotate(-45deg));
+        }
+    }
+    
+    &.checked {
+        border-color: #d4896d;
+        
+        >div {
+            opacity: 1;
+            @include scale(1);
+        }
+    }
+}
+
+.te-ngIfAnim {
+    &.ng-animate {
+        @include transition(all .5s);
+    }
+    &.ng-enter {
+        z-index: -1;
+        opacity: 0;
+        @include translateY(-2.5em);
+
+        &.ng-enter-active {
+            z-index: 0;
+            opacity: 1;
+            @include translateY(0);
+        }
+    }
+    &.ng-leave {
+        z-index: 0;
+        opacity: 1;
+        @include translateY(0);
+
+        &.ng-leave-active {
+            z-index: -1;
+            opacity: 0;
+            @include translateY(-2.5em);
+        }
+    }
+}
+
+.te-loading {
+    position: absolute;
+    background: $pink;
+    /*background: white;*/
+    border-radius: 50%;
+    @include box-shadow(0 2px 2px 0 rgba(0,0,0,.4));
+    padding: 1em;
+    color: white;
+    fill: white;
+    /*color: #E91E63;*/
+    border: 2px solid;
+    top: 50%;
+    left: 50%;
+    @include flex();
+    @include vtrans(translate(-50%, -50%) scale(1));
+    @include transition(all .3s $ease);
+
+    &.ng-hide {
+        opacity: 0;
+        @include vtrans(translate(-50%, -50%) scale(1.5));
+    }
+
+    &.disable {
+        opacity: 0 !important;
+        @include vtrans(translate(-50%, -50%) scale(1.5) !important);
+    }
+
+    svg {
+        width: 1em;
+        height: 1em;
+        font-size: 2em;
+        animation: te-iconSpin 2s infinite linear;
+    }
+
+    &.small {
+        padding: 0.3em;
+
+        i {
+            font-size: 1.5em;
+        }
+    }
+}
+
+.te-repeatAnim {
+
+    > *.ng-move,
+    > *.ng-enter,
+    > *.ng-leave {
+        @include transform-origin(100%, 0);
+        @include transition(all .5s $ease);
+    }
+
+    &.enterOnly {
+        > *.ng-leave {
+            @include transition(none);
+        }
+    }
+
+    > *.ng-leave.ng-leave-active,
+    > *.ng-move,
+    > *.ng-enter {
+        opacity: 0;
+        //@include scale(.5);
+        @include vtrans(translateY(30px) scale(.5) rotateZ(-7deg));
+    }
+
+    > *.ng-leave,
+    > *.ng-move.ng-move-active,
+    > *.ng-enter.ng-enter-active {
+        opacity: 1;
+        //@include scale(1);
+        @include vtrans(translateY(0) scale(1) rotateZ(0));
+    }
+}
+
+.te-c-success {
+    color: $brand-success !important;
+    fill: $brand-success !important;
+}
+
+.te-i {
+    width: 21px;
+    height: 21px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    fill: inherit;
+    
+    
+}
+
+@include keyframes(te-iconSpin) {
+    0% {
+        @include rotate(0);
+    }
+
+    100% {
+        @include rotate(359deg);
+    }
+}

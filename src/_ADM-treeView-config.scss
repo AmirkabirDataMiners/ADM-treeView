@@ -1,0 +1,232 @@
+
+$col-outer: #1D1D1D;
+$col-body: #E2DBD1;
+$col-blueBlack: #2b3541;
+$col-admLogo: #00cec6;
+$col-pink: #ff6d60;
+$col-blue: #4285f4;
+
+$yellow: #ffc200;
+$warmBrown1x: #FCEBB6;
+$warmBrown2x: #FDFDE9;
+$blueOil: #3d627f;
+$greenBlue: #07b3b5;
+$gray: #C3C3C3;
+$light: #BDBDBD;
+$black: #1D1C1C;
+$red: #F90800;
+$brown: #C35300;
+$gold: #edcf83;
+$pink: #e91e63;
+$orange: #ed6c44;
+
+$cyan: #6df5f0;
+$purple1: #a691ff;
+$purple2: #605ca8;
+$purple3: #2a2579;
+
+$brand-primary: #0072bc;
+$brand-success: darken(#00ff00,15%);
+$brand-info:    #1cbbb4;
+$brand-warning: #f7941d;
+$brand-danger:  #ed1c24;
+$brand-instagram: $brown;
+
+$col-instagram: $brown;
+$col-google: #DB4437;
+$col-google-plus: #DB4437;
+$col-linkedin: #1C87BD;
+$col-facebook: #4B6DAA;
+$col-twitter: #55ACEE;
+$col-pinterest: #CA1517;
+$col-youtube: #E22F1F;
+
+$milad-blue: #079DEB;
+
+$tableColor: darken(#f8f8f8, 2%);
+$homeScrollbar: #808080;
+
+$ease: ceaser($easeInOutBack);
+
+// DEVICE LIST //
+$xs-min: "only screen and (min-width:none)";
+$xs-max: "only screen and (max-width:599px)";
+$xs-sm: "only screen and (min-width: none) and (max-width:599px)";
+
+$sm-min: "only screen and (min-width:600px)";
+$sm-max: "only screen and (max-width:959px)";
+$sm-md: "only screen (min-width: 600px) and (max-width:959px)";
+
+$md-min: "only screen and (min-width:960px)";
+$md-max: "only screen and (max-width:1279px)";
+$md-lg: "only screen (min-width: 960px) and (max-width:1279px)";
+
+$lg-min: "only screen and (min-width:1280px)";
+$lg-max: "only screen and (max-width:none)";
+
+$sidebarMedia: "only screen and (min-width:1275px)";
+$notSidebarMedia: "only screen and (max-width:1274px)";
+
+@mixin bredCrumbColor($color) {
+    a {
+        background: $color !important;
+    }
+
+    &:after {
+        border-right-color: $color !important;
+    }
+
+    &:before {
+        border-color: $color !important;
+        border-right-color: transparent !important;
+    }
+}
+
+@mixin vtrans($css)  {
+    -moz-transform: $css;
+    -ms-transform: $css;
+    -webkit-transform: $css;
+    transform: $css;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+}
+
+@mixin flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin absCenter() {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+
+    &.top {
+        top: 0;
+        @include translate(-50%, 0);
+    }
+}
+
+@mixin borderdBtn($body, $border, $size) {
+    width: $size;
+    height: $size;
+    background: $body;
+    border: 2px solid $border;
+    border-radius: 50%;
+    text-align: center;
+    line-height: $size;
+    @include box-shadow(0 2px 2px 0 rgba(black, .3));
+
+    i {
+        color: $border;
+        font-size: .6 * $size;
+    }
+}
+
+@mixin triangle-90deg($type, $color, $width, $height) {
+    @if $height == null {
+        $height: $width;
+    }
+
+    width: 0;
+    height: 0;
+
+    @if $type == top-left {
+        border-top: $height solid $color;
+        border-right: $width solid transparent;
+    }
+
+    @if $type == top-right {
+        border-top: $height solid $color;
+        border-left: $width solid transparent;
+    }
+
+    @if $type == bottom-left {
+        border-bottom: $height solid $color;
+        border-right: $width solid transparent;
+    }
+
+    @if $type == bottom-right {
+        border-bottom: $height solid $color;
+        border-left: $width solid transparent;
+    }
+}
+
+@mixin noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+$pi: 3.14159265359;
+$_precision: 10;
+
+@function pow($base, $exp) {
+    $value: $base;
+    @if $exp > 1 {
+        @for $i from 2 through $exp {
+            $value: $value * $base;
+        }
+    }
+    @if $exp < 1{
+        @for $i from 0 through -$exp {
+            $value: $value / $base;
+        }
+    }
+    @return $value;
+}
+
+@function fact($num) {
+    $fact: 1;
+    @if $num > 0{
+        @for $i from 1 through $num {
+            $fact: $fact * $i;
+        }
+    }
+    @return $fact;
+}
+
+@function _to_unitless_rad($angle) {
+    @if unit($angle) == "deg" {
+        $angle: $angle / 180deg * $pi;
+    }
+    @if unit($angle) == "rad" {
+        $angle: $angle / 1rad;
+    }
+    @return $angle;
+}
+
+@function sin($angle){
+    $a: _to_unitless_rad($angle);
+    $sin: $a;
+    @for $n from 1 through $_precision {
+        $sin: $sin + (pow(-1, $n) / fact(2 * $n + 1) ) * pow($a, (2 * $n + 1));
+    }
+    @return $sin;
+}
+
+@function cos($angle){
+    $a: _to_unitless_rad($angle);
+    $cos: 1;
+    @for $n from 1 through $_precision {
+        $cos: $cos + ( pow(-1,$n) / fact(2*$n) ) * pow($a,2*$n);
+    }
+    @return $cos;
+}
+
+@function tan($angle){
+    @return sin($angle) / cos($angle);
+}

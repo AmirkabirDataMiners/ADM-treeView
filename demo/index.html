@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+    <head>
+        <title>ADM-treeView | Pure AngularJs treeView</title>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="description" content="ADM-treeView | Pure AngularJs treeView">
+        <meta name="keywords" content="ADM-treeView,Pure,AngularJs,treeView,adm,amirkabir,data,miners,persian,sass,bootstrap,compass">
+        <meta name="language" content="en">
+        <meta name="robots" content="all" />
+        <meta name="rights" content="Copyright © 2016 ADM | Amirkabir Data Miners - All rights reserved">
+        <meta name="Copyright" content="ADM | Amirkabir Data Miners">
+        <meta name="Designer" content="https://github.com/MeTe-30">
+        <meta name="Publisher" content="ADM | Amirkabir Data Miners">
+        <meta name="distribution" content="Global">
+        <meta name="Robots" content="INDEX,FOLLOW">
+        <meta name="zipcode" content="1481846515">
+        <meta name="city" content="Tehran">
+        <meta name="country" content="Iran">
+        <meta property="og:title" content="Pure AngularJs treeView" />
+        <meta property="og:site_name" content="ADM-treeView"/>
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://amirkabirdataminers.github.io/ADM-treeView">
+        <meta property="og:description" content="ADM-treeView | Pure AngularJs treeView" />
+        <meta property="og:image" content="http://amirkabirdataminers.github.io/ADM-treeView/images/cover.jpg" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">   
+        <link rel="author" href="https://google.com/+ADMcoNet-GPlus"> 
+        
+        <script type="application/ld+json">
+            {"@graph": [{
+                "@context" : "http://schema.org",
+                "@type" : "Organization",
+                "name" : "Amirkabir Data Miners",
+                "alternateName" : "ADM | Amirkabir Data Miners",
+                "description": "Web Applications, Business Intelligent Applications, Smart Devices Applications",
+                "url" : "https://adm-co.net",
+                "email": "info@adm-co.net",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://adm-co.net/content/images/ADM_Logo.png",
+                    "caption": "Amirkair Data Miners Logo",
+                    "width": "2480px",
+                    "height": "1459px"
+                },
+                "telephone": "+98-21-44002963",
+                "address": "Floor 2, No 380, Aghil St, Ayatollah Kashani St, Tehran, 1481846515 Iran",
+                "contactPoint" : [{
+                    "@type" : "ContactPoint",
+                    "telephone" : "+98-21-44002963",
+                    "contactType" : "customer service",
+                    "contactOption" : "TollFree",
+                    "areaServed" : "IR",
+                    "availableLanguage" : "Persian"
+                }],
+                "sameAs" : [
+                    "https://google.com/+ADMcoNet-GPlus",
+                    "https://www.linkedin.com/company/adm-amirkabir-data-miners-?trk=biz-companies-cym",
+                    "https://instagram.com/AmirkabirDataMiners/",
+                    "https://www.facebook.com/AmirkabirDataMiners",
+                    "http://www.pinterest.com/AmirkabirDM/",
+                    "https://twitter.com/AmirkabirDM",
+                    "https://www.youtube.com/channel/UCQxP0vZA05Pl9GlyXXQt14A/about"
+                ]
+            },
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "url": "http://amirkabirdataminers.github.io/ADM-treeView",
+                "name" : "ADM-treeView",
+                "alternateName" : "ADM-treeView | Pure AngularJs treeView",
+                "description": "ADM-treeView | Pure AngularJs treeView",
+                "keywords": "ADM-treeView,Pure,AngularJs,treeView,adm,amirkabir,data,miners,persian,sass,bootstrap,compass",
+                "about": "ADM-treeView | Pure AngularJs treeView"
+            }]}
+        </script>
+        
+        
+        
+        
+        <link rel="stylesheet" href="../dist/min/ADM-treeView.min.css" />
+        <link rel="stylesheet" href="stylesheets/app.css" />
+        <link rel="stylesheet" href="stylesheets/github.min.css">
+
+        <script src="js/prism.js"></script>
+        <script src="../lib/angular.min.js"></script>
+        <script src="../lib/angular.animate.min.js"></script>
+        <script src="../dist/min/ADM-treeView.min.js"></script>
+        <script src="js/app.js"></script>
+        
+    </head> 
+
+    <body ng-controller="bodyCtrl">
+        <div class="mainView_container">       
+            <div class="mainView">
+                <div class="row">
+                    <h1>
+                        <strong>Pure <span class="red">AngularJs</span> <span class="orange">TreeView</span></strong>
+                        <br>
+                        <!--        <iframe src="https://ghbtns.com/github-btn.html?user=AmirkabirDataMiners&type=follow&count=true" frameborder="0" scrolling="0" width="230px" height="20px"></iframe>-->
+                        <iframe src="https://ghbtns.com/github-btn.html?user=AmirkabirDataMiners&repo=ADM-treeView&type=watch&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=AmirkabirDataMiners&repo=ADM-treeView&type=fork&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                        <img src="https://img.shields.io/badge/npm-v1.0.0-brightgreen.svg" alt="">
+                        <img src="https://img.shields.io/badge/bower-v1.0.0-brightgreen.svg" alt="">
+                        <img src="https://img.shields.io/badge/Pure-AngularJs-red.svg" alt="">
+                        <img src="http://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat" alt="">
+
+                    </h1>
+                    <hr>
+                    <br>
+                    <h2><strong>Implementation steps</strong></h2>
+                    <hr>
+                    <h3>Step 1: Install ADM-treeView</h3>
+                    
+                    <pre class="customCode line-numbers"><code class="language-markup">
+                        npm install adm-trv
+                        bower install adm-trv
+                    </code></pre>
+
+                    <h3>Step 2: Include the files in your app</h3>
+
+                    <pre class="customCode line-numbers"><code class="language-html">
+                        &lt;!doctype html&gt;
+                        &lt;html ng-app="myApp"&gt;
+                            &lt;head&gt;
+                                &lt;link rel="stylesheet" href="css/ADM-treeView.min.css" /&gt;
+                                &lt;script src="js/angular.min.js"&gt;&lt;/script&gt;
+                                &lt;script src="js/ADM-treeView.min.js"&gt;&lt;/script&gt;
+                                ...
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            ...
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code></pre>
+
+                    <h3>Step 3: Inject the ADM-treeView module</h3>
+
+                    <pre class="customCode line-numbers"><code class="language-javascript">
+                        var app = angular.module('myApp', ['ADM-treeView']);
+                    </code></pre>
+
+                    <h3>Step 4: Add the adm-trv directive to a DOM element</h3>
+
+                    <pre class="customCode line-numbers"><code class="language-html">
+                        &lt;adm-trv ng-model="model"&gt;&lt;/adm-trv&gt;
+                    </code></pre>
+                    <br>
+                    <h2><strong>Options</strong></h2>
+                    <hr>
+                    <h3>Set options for entire of app</h3>
+
+                    <pre class="customCode line-numbers"><code class="language-javascript">
+                        app.config(['ADMtrvProvider', function(ADMtrv) {
+                            ADMtrv.setConfigs({
+                                childName: 'kids',
+                                title: '$item.mainDS.title',
+                                trackBy: '$item.mainDS.id',
+                                dictionary: {
+                                    noItem: ' :( '
+                                },
+                                ...
+                            });
+                        }]);
+                    </code></pre>
+
+                    <h3>Set options for each directive</h3>
+                    <pre class="customCode line-numbers"><code class="language-html">
+                        &lt;!-- pass options from controller --&gt;
+                        &lt;adm-trv ng-model="ctrl.model1" configs="tree1Options"&gt;&lt;/adm-trv&gt;
+                        &lt;!-- or write them inline --&gt;
+                        &lt;adm-trv ng-model="ctrl.model1" configs="{childName: 'levels', readOnly: true}"&gt;&lt;/adm-trv&gt;
+                    </code></pre>
+
+                    <div>
+                        <h3>Example:</h3>
+                        <div class="split withPadding" style="margin: 0 auto; max-width: 1100px;">
+                            <div>
+                                <adm-trv ng-model="ctrl.model1" configs="tree1Options"></adm-trv>
+                                <div class="customCode"><pre><p>tree1Options</p><code>{{ tree1Options | json}}</code></pre></div>
+                                <div class="customCode"><pre><p>ctrl.model1</p><code>{{ctrl.model1 || [] | json}}</code></pre></div>
+                            </div>
+                            <div>
+                                <adm-trv ng-model="ctrl.model1" configs="{childName: 'levels', readOnly: true}"></adm-trv>
+                                <div class="customCode"><pre><p>{childName: 'levels', readOnly: true}</p><code>{{ {childName: 'levels', readOnly: true} | json}}</code></pre></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>Quick look</h3>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in availableOptions">
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.type}}</td>
+                                    <td>{{item.default}}</td>
+                                    <td ng-bind-html="item.description | sce"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+                    <h2><strong>onKidOpen event</strong></h2>
+                    <hr>
+                    In readOnly mode 'onKidOpen' event fire whenever the tree leafs clicked! You can return HTML content directly or by promise to show under leaf.
+                    <br>
+                    <br>
+                    <pre class="customCode line-numbers"><code class="language-javascript">
+                        // return string
+                        $scope.tree2_2Options = {
+                            childName: 'categories',
+                            readOnly: true,
+                            onKidOpen: function(node) {
+                                return 'The Node title is: "' + node.title + '"';
+                            }
+                        }
+                        
+                        // return promise
+                        $scope.tree2_2Options = {
+                            childName: 'categories',
+                            readOnly: true,
+                            onKidOpen: function(node) {
+                                var deferred = $q.defer();
+                                setTimeout(function() {
+                                    deferred.resolve('The Node title is: "' + node.title + '"');
+                                }, 2000);
+                                return deferred.promise;
+                            }
+                        }
+                    </code></pre>
+                    
+                       <div>
+                        <h3>Example:</h3>
+                        <div class="split withPadding" style="margin: 0 auto; max-width: 1100px;">
+                            <div>
+                                <adm-trv ng-model="ctrl.model2" configs="tree2Options"></adm-trv>
+                                <div class="customCode"><pre><p>tree2Options</p><code>{{ tree2Options | json}}</code></pre></div>
+                                <div class="customCode"><pre><p>ctrl.model1</p><code>{{ctrl.model2 || [] | json}}</code></pre></div>
+                            </div>
+                            <div>
+                                <adm-trv ng-model="ctrl.model2" configs="tree2_2Options"></adm-trv>
+                                <div class="customCode"><pre><p>tree2_2Options</p><code class="language-json">
+                                {
+                                    childName: 'categories',
+                                    readOnly: true,
+                                    onKidOpen: function(node) {
+                                        var deferred = $q.defer();
+                                        setTimeout(function() {
+                                            deferred.resolve('The Node title is: "' + node.title + '"');
+                                        }, 2000);
+                                        return deferred.promise;
+                                    }
+                                }
+                           </code></pre></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <h2><strong>onAdd event</strong></h2>
+                    <hr>
+                    The 'onAdd' event fire on adding item to tree. <br>
+                    In case you want to post each node to server on add event, you can return promise to adm-trv to add node after server response. <br>
+                    Return value can be 'Object' or 'Boolean'. <br>
+                    <ul>
+                        <li>
+                            <strong>Boolean:</strong> adm-trv continue adding node to tree by catching 'true' value.
+                        </li>
+                        <li>
+                            <strong>Object:</strong> In case server add 'Id' to your object after inserting to DB, that might be need for further editing or deleting, adm-trv will extend client object with your returned object. Return false to avoid adding node to tree.
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    <pre class="customCode line-numbers"><code class="language-javascript">
+                        // return Booelan
+                        $scope.tree3_1Options = {
+                            childName: 'organizations',
+                            dictionary: {
+                                titlePlaceholder: 'A-Z only ...'
+                            },
+                            onAdd: function(parentNode, newNode, titleOnly) {
+                                return !/[^a-zA-Z]/.test(titleOnly);
+                            }
+                        }
+                        
+                        //return promise
+                        $scope.tree3_2Options = {
+                            childName: 'organizations',
+                            onAdd: function(parentNode, newNode, titleOnly) {
+                                var deferred = $q.defer();
+                                setTimeout(function() {
+                                    deferred.resolve({
+                                        id: Math.floor(Math.random() * 1000)
+                                    });
+                                }, 500);
+                                return deferred.promise;
+                            }
+                        }
+                    </code></pre>
+
+                    <div>
+                        <h3>Example:</h3>
+                        <div class="split withPadding" style="margin: 0 auto; max-width: 1100px;">
+                            <div>
+                                <adm-trv ng-model="ctrl.model3_1" configs="tree3_1Options"></adm-trv>
+                                <div class="customCode"><pre><p>tree3_1Options</p><code class="language-json">
+                                {
+                                    childName: 'organizations',
+                                    dictionary: {
+                                        titlePlaceholder: 'A-Z only ...'
+                                    },
+                                    onAdd: function(parentNode, newNode, titleOnly) {
+                                        return !/[^a-zA-Z]/.test(titleOnly);
+                                    }
+                                }
+                                </code></pre></div>
+                                <div class="customCode"><pre><p>ctrl.model3_1</p><code>{{ctrl.model3_1 || [] | json}}</code></pre></div>
+                            </div>
+                            <div>
+                                <adm-trv ng-model="ctrl.model3_2" configs="tree3_2Options"></adm-trv>
+                                <div class="customCode"><pre><p>tree3_2Options</p><code class="language-json">
+                                {
+                                    childName: 'organizations',
+                                    onAdd: function(parentNode, newNode, titleOnly) {
+                                        var deferred = $q.defer();
+                                        setTimeout(function() {
+                                            deferred.resolve({
+                                                id: Math.floor(Math.random() * 1000)
+                                            });
+                                        }, 500);
+                                        return deferred.promise;
+                                    }
+                                }
+                                </code></pre></div>
+                                <div class="customCode"><pre><p>ctrl.model3_2</p><code>{{ctrl.model3_2 || [] | json}}</code></pre></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <h2><strong>onEdit & onDelete events</strong></h2>
+                    <hr>
+                    <br>
+                    <pre class="customCode line-numbers"><code class="language-javascript">
+                        // return Booelan
+                        $scope.tree4_1Options = {
+                            onEdit: function (currentNode, parentNode) {
+                                return true; // or False
+                            },
+                            onDelete: function (currentNode, parentNode) {
+                                return true; // or False
+                            }
+                        }
+                        
+
+                        //return promise
+                        $scope.tree4_2Options = {
+                            onEdit: function (currentNode, parentNode) {
+                                var deferred = $q.defer();
+                                setTimeout(function() {
+                                    deferred.resolve(true); // or False
+                                }, 500);
+                                return deferred.promise;
+                            },
+                            onDelete: function (currentNode, parentNode) {
+                                var deferred = $q.defer();
+                                setTimeout(function() {
+                                    deferred.resolve(true); // or False
+                                }, 500);
+                                return deferred.promise;
+                            }
+                        }
+                    </code></pre>
+                    
+
+                    <br>
+                    <h2><strong>Selectable</strong></h2>
+                    <hr>
+                    <br>
+                    <pre class="customCode line-numbers"><code class="language-html">
+                        &lt;adm-trv ng-model="ctrl.model4_1" selected="ctrl.model4_1Selected" configs="tree4_1Options"&gt;&lt;/adm-trv&gt;
+                        &lt;adm-trv ng-model="ctrl.model4_2" selected="ctrl.model4_2Selected" configs="tree4_2Options"&gt;&lt;/adm-trv&gt;
+                    </code></pre>
+                    <pre class="customCode line-numbers"><code class="language-javascript">
+                        $scope.ctrl.model4_1Selected = [];
+                        $scope.tree4_1Options = {
+                            childName: 'bAghAlies',
+                            selectable: true
+                        }
+                        
+                        $scope.ctrl.model4_2Selected = [];
+                        $scope.tree4_2Options = {
+                            childName: 'bAghAlies',
+                            title: '$item.mainBAghAliDS.title',
+                            trackBy: '$item.mainBAghAliDS.id',
+                            selectable: true
+                        }
+                    </code></pre>
+                    
+
+                    <div>
+                        <h3>Example:</h3>
+                        <div class="split withPadding" style="margin: 0 auto; max-width: 1100px;">
+                            <div>
+                                <adm-trv ng-model="ctrl.model4_1" selected="ctrl.model4_1Selected" configs="tree4_1Options"></adm-trv>
+                                <div class="customCode"><pre><p>ctrl.model4_1Selected</p><code>{{ctrl.model4_1Selected | json}}</code></pre></div>
+                                <div class="customCode"><pre><p>tree4_1Options</p><code>{{ tree4_1Options | json}}</code></pre></div>
+                                <div class="customCode"><pre><p>ctrl.model4_1</p><code>{{ctrl.model4_1 | json}}</code></pre></div>
+                            </div>
+                            <div>
+                                <adm-trv ng-model="ctrl.model4_2" selected="ctrl.model4_2Selected" configs="tree4_2Options"></adm-trv>
+                                <div class="customCode"><pre><p>ctrl.model4_2Selected</p><code>{{ctrl.model4_2Selected | json}}</code></pre></div>
+                                <div class="customCode"><pre><p>tree4_2Options</p><code>{{ tree4_2Options | json}}</code></pre></div>
+                                <div class="customCode"><pre><p>ctrl.model4_2</p><code>{{ctrl.model4_2 | json}}</code></pre></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <br>
+                    <h2><strong>Dictionary</strong></h2>
+                    <hr>
+                    <br>
+                    <pre class="customCode line-numbers"><code class="language-javascript">
+                        $scope.tree5_1Options = {
+                            childName: 'golAbies',
+                            dictionary: {
+                                noItem: 'No golAbi! :(',
+                                titlePlaceholder: 'Type ...',
+                                rootAddBtn: 'Add main golAbi',
+                                confirmBtn: 'YES',
+                                cancelBtn: 'NO'
+                            }
+                        }
+
+                        $scope.tree5_2Options = {
+                            childName: 'golAbies',
+                            direction: 'rtl',
+                            dictionary: {
+                                noItem: 'موردی وجود ندارد!',
+                                titlePlaceholder: 'عنوان ...',
+                                rootAddBtn: 'افزودن',
+                                confirmBtn: 'تایید',
+                                cancelBtn: 'انصراف'
+                            }
+                        }
+                    </code></pre>
+
+
+                    <div>
+                        <h3>Example:</h3>
+                        <div class="split withPadding" style="margin: 0 auto; max-width: 1100px;">
+                            <div>
+                                <adm-trv ng-model="ctrl.model5_1" configs="tree5_1Options"></adm-trv>
+                            </div>
+                            <div>
+                                <adm-trv ng-model="ctrl.model5_2" configs="tree5_2Options"></adm-trv>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+
+                <footer>
+                    <a class="footerLogo" href="https://adm-co.net">
+                        <img src="images/admLogo.svg" alt="Amirkabir Data Miners Logo">
+                        Amirkabir Data Miners
+                    </a>
+                </footer>
+
+            </div>
+        </div>
+
+    </body>
+    
+    <script>
+        
+    </script>
+
+</html>
