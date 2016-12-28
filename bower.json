@@ -20,7 +20,7 @@
         "amirkabirdataminers",
         "adm"
       ],
-    "license": "MIT",,
+    "license": "MIT",
     "dependencies": {
         "browser-sync": "^2.18.5",
         "uglify-js": "^2.7.5"
