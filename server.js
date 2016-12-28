@@ -8,7 +8,7 @@ var copyRight = [
     '/*',
     '* Demo: http://amirkabirdataminers.github.io/ADM-treeView',
     '*',
-    '* @version 1.0.0',
+    '* @version 1.0.1',
     '*',
     '* © 2016 Amirkabir Data Miners <info@adm-co.net> - www.adm-co.net',
     '*/',

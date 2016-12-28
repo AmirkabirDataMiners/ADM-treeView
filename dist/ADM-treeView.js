@@ -1,7 +1,7 @@
 /*
  * Demo: http://amirkabirdataminers.github.io/ADM-treeView
  *
- * @version 1.0.0
+ * @version 1.0.1
  *
  * © 2016 Amirkabir Data Miners <info@adm-co.net> - www.adm-co.net
  */
@@ -169,7 +169,7 @@
             link: function (scope, element, attrs, ngModel) {
                 
                 scope.options = angular.extend({}, ADMtrv.getOptions(), scope.configs || {});
-                scope.options.dictionary = angular.extend({}, ADMtrv.getOptions().dictionary, scope.configs.dictionary || {});
+                scope.options.dictionary = angular.extend({}, ADMtrv.getOptions().dictionary, (scope.configs || {}).dictionary || {});
                 scope.options.trackBy = scope.options.trackBy.replace('$item.', '');
                 scope.options.readOnly = scope.options.readOnly || scope.options.selectable;
 
