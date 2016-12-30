@@ -54,9 +54,9 @@ var startBrowserSync = function() {
 
 var initialize = function() {
     
-    minifyMainScript();
-    startWatchingMainScript();
     startBrowserSync();
-    startCompassCommands();
+    minifyMainScript(); // Comment line for view mode. 
+    startWatchingMainScript(); // Comment line for view mode. 
+    startCompassCommands(); // Comment line for view mode. You need to install Ruby Gem, Compass, SASS before
     
 }();

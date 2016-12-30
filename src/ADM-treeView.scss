@@ -56,7 +56,6 @@ adm-trv {
             text-align: center;
             width: 25px;
             height: 25px;
-            padding: 4px;
             line-height: 25px;
             vertical-align: top;
             margin-top: 4px;
@@ -75,6 +74,9 @@ adm-trv {
                 opacity: 0;
                 @include scale(.5);
             }
+        }
+        svg.te-i:not(.noI) {
+            padding: 4px;
         }
 
 
@@ -128,8 +130,10 @@ adm-trv {
             padding-left: 6px;
         }
         
-        .te-add .add input {
-            margin-left: 1em;
+        .te-add .add {
+            input, select {
+                margin-left: 1em;
+            }
         }
     }
     &.ltr {
@@ -146,8 +150,10 @@ adm-trv {
             padding-right: 6px;
         }
 
-        .te-add .add input {
-            margin-right: 1em;
+        .te-add .add {
+            input, select {
+                margin-right: 1em;
+            }
         }
     }
 }
@@ -253,7 +259,7 @@ adm-trv {
         margin-top: 1.4em;
         text-align: center;
 
-        input {
+        input, select {
             width: 150px;
             font-size: 0.8em;
             border-radius: 16px;
