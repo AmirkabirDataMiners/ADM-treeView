@@ -1,47 +1,44 @@
 {
-    "name": "adm-trv",
-    "version": "1.0.1",
-    "homepage": "https://github.com/AmirkabirDataMiners/ADM-treeView",
-    "authors": [
-        "ADM | Amirkabir Data Miners <info@adm-co.net>"
-      ],
-    "description": "Pure AngularJs TreeView",
-    "main": "server.js",
-    "moduleType": [
-        "globals",
-        "npm"
-      ],
-    "keywords": [
-        "ADM-treeView",
-        "angular",
-        "pure",
-        "treeview",
-        "sass",
-        "amirkabirdataminers",
-        "adm"
-      ],
-    "license": "MIT",
-    "dependencies": {
-    },
-    "authors": [
-        "ADM | Amirkabir Data Miners <info@adm-co.net>"
-    ],
-    "ignore": [
-        "*.DS_Store",
-        "demo/_trash",
-        "demo/dist",
-        "demo/lib",
-        "demo/.git",
-        "demo/scss",
-        "demo/.sass-cache",
-        "demo/config.rb",
-        "demo/.gitignore",
-        ".git",
-        ".gitignore",
-        ".sass-cache",
-        "node_modules",
-        "src/.sass-cache",
-        "src/ADM-treeView.html",
-        "src/ADM-treeView.html.js"
-    ]
+  "name": "adm-trv",
+  "version": "1.0.3",
+  "homepage": "https://github.com/AmirkabirDataMiners/ADM-treeView",
+  "authors": [
+    "ADM | Amirkabir Data Miners <info@adm-co.net>"
+  ],
+  "description": "Pure AngularJs TreeView",
+  "main": "server.js",
+  "moduleType": [
+    "globals",
+    "npm"
+  ],
+  "keywords": [
+    "ADM-treeView",
+    "angular",
+    "pure",
+    "treeview",
+    "sass",
+    "amirkabirdataminers",
+    "adm"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "ignore": [
+    "*.DS_Store",
+    "demo/_trash",
+    "demo/dist",
+    "demo/lib",
+    "demo/.git",
+    "demo/scss",
+    "demo/.sass-cache",
+    "demo/config.rb",
+    "demo/.gitignore",
+    ".git",
+    ".gitignore",
+    "*.log",
+    ".sass-cache",
+    "node_modules",
+    "src/.sass-cache",
+    "src/ADM-treeView.html",
+    "src/ADM-treeView.html.js"
+  ]
 }
