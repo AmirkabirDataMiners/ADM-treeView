@@ -1,7 +1,7 @@
 # ADM-treeView  
-![Version](https://img.shields.io/badge/npm-v1.0.3-brightgreen.svg)
+![Version](https://img.shields.io/badge/npm-v1.2.0-brightgreen.svg)
 &nbsp;
-![Version](https://img.shields.io/badge/bower-v1.0.3-brightgreen.svg)
+![Version](https://img.shields.io/badge/bower-v1.2.0-brightgreen.svg)
 &nbsp;
 ![AngularJs](https://img.shields.io/badge/Pure-AngularJs-red.svg)
 &nbsp;
@@ -10,6 +10,9 @@
 *Pure AngularJs TreeView by [ADM | Amirkabir Data Miners](https://adm-co.net)*
 
 ![ADM-treeView cover](http://amirkabirdataminers.github.io/ADM-treeView/images/cover.jpg)
+
+### Updates in V1.2.0
+* Nothing changed since V1.0.1, the version upgrade is just because of npm bug.
 
 
 ### Demo  

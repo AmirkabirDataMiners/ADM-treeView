@@ -4,7 +4,7 @@ var bs = require('browser-sync').create();
 var exec = require('child_process').exec;
 
 var moduleName = 'ADM-treeView';
-var version = '1.0.3';
+var version = '1.2.0';
 
 var copyRight = 
 `/*
